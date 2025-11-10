@@ -58,7 +58,7 @@ class BSTTests(unittest.TestCase):
         self.assertTrue(lookup(bst, point1_eq))
         self.assertTrue(lookup(bst, point0))
         bst = delete(bst, point1)
-        self.assertTrue(lookup(bst, point1_eq))
+        self.assertFalse(lookup(bst, point1_eq))
         bst = delete(bst, point1_eq)
         self.assertFalse(lookup(bst, point1))
         self.assertFalse(lookup(bst, point1_eq))
